@@ -60,13 +60,13 @@ const Navbar = () => {
 
           {/* Desktop Action Buttons */}
           <div className="hidden lg:flex items-center gap-5">
-            <button className="flex items-center gap-2 px-6 py-3 text-white/90 border border-white/10 rounded-full hover:bg-white/5 transition-all text-sm font-semibold cursor-pointer">
+            <button className="flex btn-shine items-center gap-2 px-6 py-3 text-white/90 border border-white/10 rounded-full hover:bg-white/5 transition-all text-sm font-semibold cursor-pointer">
               <TbWorld className="text-lg" />
               <span className="hidden xl:inline">English</span>
               <IoIosArrowDown className="text-xs opacity-60" />
             </button>
             
-            <button className="bg-[#ffcc4d] text-black font-extrabold px-8 py-3  rounded-full hover:brightness-110 transition-all active:scale-95 text-sm cursor-pointer shadow-lg shadow-[#ffcc4d]/10">
+            <button className="btn-shine bg-[#FFD12D] text-black font-extrabold px-8 py-3 rounded-full transition-all active:scale-95 text-sm cursor-pointer shadow-lg shadow-[#FFD12D]/20 hover:shadow-[#FFD12D]/30">
               Get Started
             </button>
           </div>
@@ -144,7 +144,7 @@ const Navbar = () => {
               English
             </button>
             
-            <button className="w-full bg-[#ffcc4d] text-black font-extrabold py-3 rounded-2xl shadow-xl shadow-[#ffcc4d]/5 uppercase tracking-widest text-sm transition-all active:scale-[0.98] cursor-pointer">
+            <button className="btn-shine w-full bg-[#FFD12D] text-black font-extrabold py-3 rounded-2xl shadow-xl shadow-[#FFD12D]/20 uppercase tracking-widest text-sm transition-all active:scale-[0.98] cursor-pointer hover:shadow-[#FFD12D]/30">
               Get Started Now
             </button>
           </div>

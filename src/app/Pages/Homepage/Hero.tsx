@@ -67,15 +67,29 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className={`flex flex-wrap items-center justify-center gap-4 pt-4 lg:justify-start ${animationClass('delay-500', true)}`}>
-            <button className="group flex cursor-pointer items-center gap-2 bg-[#ffcc4d] hover:bg-[#ffdb7d] text-black font-extrabold px-8 py-4 rounded-full transition-all active:scale-95 shadow-[0_10px_30px_rgba(255,204,77,0.3)]">
+            <button className="btn-shine group flex cursor-pointer items-center gap-2 bg-[#FFD12D] text-black font-extrabold px-8 py-4 rounded-full transition-all active:scale-95 shadow-lg shadow-[#FFD12D]/20 hover:shadow-[#FFD12D]/30">
               Create a Story
-              <HiArrowRight className="text-xl group-hover:translate-x-1 transition-transform" />
+              <HiArrowRight className="text-xl transition-transform duration-300 -rotate-45 group-hover:rotate-0" />
             </button>
             
-            <button className="flex items-center cursor-pointer gap-2 bg-white/5 border border-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-full transition-all active:scale-95">
+            <button className="flex btn-shine items-center cursor-pointer gap-2 bg-white/5 border border-white/10  text-white font-semibold px-8 py-4 rounded-full transition-all active:scale-95">
               Watch Demo
-              <div className="w-6 h-6 rounded-full border border-white/40 flex items-center justify-center">
-                <HiPlay className="text-sm" />
+              <div className="relative w-6 h-6 rounded-full border border-white/40 flex items-center justify-center">
+                {/* Dark vibration layer */}
+                <div 
+                  className="absolute inset-0 rounded-full bg-black/20 animate-ping"
+                  style={{
+                    animation: 'vibration-dark 1.5s ease-in-out infinite'
+                  }}
+                ></div>
+                {/* Light vibration layer */}
+                <div 
+                  className="absolute inset-0 rounded-full bg-white/30 animate-ping"
+                  style={{
+                    animation: 'vibration-light 1.5s ease-in-out infinite 0.2s'
+                  }}
+                ></div>
+                <HiPlay className="text-sm relative z-10" />
               </div>
             </button>
           </div>

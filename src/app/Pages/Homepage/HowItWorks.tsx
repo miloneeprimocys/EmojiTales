@@ -8,31 +8,41 @@ const steps = [
     id: 1,
     title: "Create a Child",
     description: "Set up your child profile in seconds.",
-    image: "/card1.svg", 
+    image: "/card1.svg",
+    bgColor: "bg-[#FDF2FF]",
+    iconBg: "bg-[#E9D5FF]",
   },
   {
     id: 2,
     title: "Pick Emojis",
     description: "Choose from fun categories.",
     image: "/card2.svg",
+    bgColor: "bg-[#FFF7ED]",
+    iconBg: "bg-[#FED7AA]",
   },
   {
     id: 3,
     title: "AI Creates Story",
     description: "Our AI turns emojis into magical stories.",
     image: "/card3.svg",
+    bgColor: "bg-[#F0FDF4]",
+    iconBg: "bg-[#BBF7D0]",
   },
   {
     id: 4,
     title: "Read & Listen",
     description: "Enjoy with narration in any voice.",
     image: "/card4.svg",
+    bgColor: "bg-[#F0F9FF]",
+    iconBg: "bg-[#BAE6FD]",
   },
   {
     id: 5,
     title: "Save & Share",
     description: "Keep, share or print your story.",
     image: "/card5.svg",
+    bgColor: "bg-[#FEF3C7]",
+    iconBg: "bg-[#FDE68A]",
   },
 ];
 
@@ -321,7 +331,12 @@ const StepCard = ({ step, index }: { step: typeof steps[0]; index: number }) => 
     </div>
 
     {/* Fixed height card container - all cards will have exact same height */}
-    <div className="w-full bg-white rounded-2xl sm:rounded-[28px] md:rounded-[30px] border border-indigo-200 px-3 pt-10 sm:pt-12 pb-4  flex flex-col items-center transition-all duration-300 group-hover:border-indigo-300 group-hover:bg-[#f8f9ff] group-hover:shadow-2xl group-hover:shadow-indigo-100/40 h-[310px] sm:h-[330px] md:h-[350px] lg:h-[360px]">
+    <div className="w-full bg-[#f8f9ff] rounded-2xl sm:rounded-[28px] md:rounded-[30px] border border-indigo-200 px-3 pt-10 sm:pt-12 pb-4  flex flex-col items-center transition-all duration-300 group-hover:border-indigo-300 group-hover:bg-white group-hover:shadow-2xl group-hover:shadow-indigo-100/40 relative overflow-hidden h-[310px] sm:h-[330px] md:h-[350px] lg:h-[360px]">
+      {/* Inner indigo shadow effect - only around boundaries */}
+      <div className="absolute inset-0 rounded-2xl sm:rounded-[28px] md:rounded-[30px] shadow-inner shadow-indigo-300/60 pointer-events-none"></div>
+      
+      {/* Card content positioned above shadows */}
+      <div className="relative z-10 flex flex-col items-center h-full">
         
         {/* Step Image Area - Using Next.js Image component */}
         <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32  flex items-center justify-center   relative overflow-hidden flex-shrink-0">
@@ -343,6 +358,7 @@ const StepCard = ({ step, index }: { step: typeof steps[0]; index: number }) => 
             {step.description}
           </p>
         </div>
+      </div>
     </div>
   </div>
   );

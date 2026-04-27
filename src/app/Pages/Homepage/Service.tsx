@@ -3,6 +3,7 @@
 import React, {
     useState, useEffect, useRef
 } from 'react';
+import { HiArrowRight } from 'react-icons/hi';
 
 const services = [
     {
@@ -112,12 +113,9 @@ const Service = () => {
                         ))}
                     </div>
 
-                    <button className={`group flex cursor-pointer mt-12 items-center gap-2 bg-[#ffcc4d] hover:bg-[#ffdb7d] text-black font-extrabold px-8 py-4 rounded-full transition-all active:scale-95 shadow-[0_10px_30px_rgba(255,204,77,0.3)] ${animationClass('delay-500', true)}`}>
+                    <button className={`btn-shine group flex cursor-pointer mt-12 items-center gap-2 bg-[#FFD12D] text-black font-extrabold px-8 py-4 rounded-full transition-all active:scale-95 shadow-lg shadow-[#FFD12D]/20 hover:shadow-[#FFD12D]/30 ${animationClass('delay-500', true)}`}>
                         Learn More
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
+                        <HiArrowRight className="text-xl transition-transform duration-300 -rotate-45 group-hover:rotate-0" />
                     </button>
                 </div>
                 {/* Right section */}

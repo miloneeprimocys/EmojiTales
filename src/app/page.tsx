@@ -7,7 +7,9 @@ import HowItWorks from "./Pages/Homepage/HowItWorks";
 import Service  from "./Pages/Homepage/Service";
 import IdealService from "./Pages/Homepage/IdealService";
 import FifthSection from "./Pages/Homepage/FifthSection";
+import Faq from "./Pages/Homepage/Faq";
 import Footer from "./Common/Footer";
+import NewsLetter from "./Pages/Homepage/NewsLetter";
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -35,6 +37,8 @@ export default function Home() {
       <Service />
       <IdealService />
       <FifthSection />
+      <Faq />
+      <NewsLetter />
       <Footer/>
       
       {/* Scroll to Top Button */}
