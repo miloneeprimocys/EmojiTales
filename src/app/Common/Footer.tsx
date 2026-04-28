@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { IoSend } from 'react-icons/io5';
 
@@ -47,7 +48,7 @@ const Footer = () => {
           {/* Logo and Socials */}
           <div className={`lg:col-span-1 ${animationClass('delay-0')}`}>
             <div className="mb-6">
-              <img src="/logo.svg" alt="EmojiTales Logo" className="h-10 w-auto" />
+              <Image src="/logo.svg" alt="EmojiTales Logo" width={120} height={40} className="h-10 w-auto" />
             </div>
             <p className="text-gray-500 text-sm  leading-relaxed mb-8 max-w-xs">
               A magical storytelling platform where kids create, imagine and learn through AI.

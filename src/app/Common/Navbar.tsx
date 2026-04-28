@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { HiOutlineMenuAlt3, HiOutlineX } from 'react-icons/hi';
 import { TbWorld } from 'react-icons/tb';
 import { IoIosArrowDown } from 'react-icons/io';
@@ -37,7 +38,7 @@ const Navbar = () => {
           
           {/* Logo Section */}
           <div className="flex items-center gap-3 cursor-pointer shrink-0">
-           <img src="/logo.svg" alt="" className='w-32 h-32 md:h-40 md:w-40'/>
+           <Image src="/logo.svg" alt="" width={160} height={160} className='w-32 h-32 md:h-40 md:w-40'/>
           </div>
 
           {/* Desktop Links */}

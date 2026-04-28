@@ -10,6 +10,7 @@ import FifthSection from "./Pages/Homepage/FifthSection";
 import Faq from "./Pages/Homepage/Faq";
 import Footer from "./Common/Footer";
 import NewsLetter from "./Pages/Homepage/NewsLetter";
+import Features from "./Pages/Homepage/Features";
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -39,6 +40,7 @@ export default function Home() {
       <FifthSection />
       <Faq />
       <NewsLetter />
+      <Features/>
       <Footer/>
       
       {/* Scroll to Top Button */}

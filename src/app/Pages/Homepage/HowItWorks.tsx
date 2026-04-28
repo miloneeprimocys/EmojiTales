@@ -180,8 +180,8 @@ const HowItWorks = () => {
         {/* Section Header */}
         <div className={`text-center mb-12 sm:mb-16 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-[#05011d] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
-            How Emoji Tales Works 
-            <span className="text-[#ffcc4d]">✨</span>
+            How Emoji Tales <span className="text-[#F97316]">Works</span> 
+            <span className="text-[#F97316] animate-pulse">✨</span>
           </h2>
         </div>
 
@@ -189,13 +189,13 @@ const HowItWorks = () => {
         <div className={`hidden xl:grid grid-cols-5 gap-6 2xl:gap-14 relative px-10 transition-all duration-1000 ease-out delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
           {/* Star decorations - Left side of first card */}
-          <div className="absolute top-1/2 -translate-y-1/2 -left-24 z-0">
-            <img src="/STARs.svg" alt="" className='h-20 '/>
+          <div className="absolute top-1/2 -translate-y-1/2 -left-24 animate-pulse z-0">
+            <Image src="/STARs.svg" alt="" width={80} height={80} className='h-20 '/>
           </div>
           
           {/* Star decorations - Right side of last card */}
-          <div className="absolute top-0 -right-12 z-0">
-            <img src="/StarsR.svg" alt="" className='h-20'/>
+          <div className="absolute top-0 -right-12 animate-pulse z-0">
+            <Image src="/StarsR.svg" alt="" width={80} height={80} className='h-20'/>
           </div>
           
           {/* DNA-style Double Dotted Connecting Line */}
