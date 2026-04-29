@@ -90,7 +90,7 @@ useEffect(() => {
     return (
 <section 
   ref={sectionRef} 
-  className="section-cut relative w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] md:w-[calc(100%-3rem)] xl:w-[calc(100%-4rem)] mx-auto pt-16 pb-28 px-4 md:pt-24 md:pb-36 bg-[#faf2e0] overflow-hidden rounded-t-[50px]"
+  className="section-cut -mb-6 relative w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] md:w-[calc(100%-3rem)] xl:w-[calc(100%-4rem)] mx-auto pt-16 pb-28 px-4 md:pt-24 md:pb-36 bg-[#faf2e0] overflow-hidden rounded-t-[50px]"
 >
             {/* Background Decorative Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">

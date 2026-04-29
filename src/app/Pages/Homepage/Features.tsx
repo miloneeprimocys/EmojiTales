@@ -58,77 +58,77 @@ const Features = () => {
   return (
     <section ref={sectionRef} className="relative w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] md:w-[calc(100%-3rem)] xl:w-[calc(100%-4rem)] mx-auto rounded-[50px] py-32 px-4 md:px-10 bg-[#F7F6FE] overflow-hidden">
       {/* Corner Backgrounds */}
-      <Image src="/LeftT.png" width={288} height={288} className="absolute top-0 left-0 w-48 xl:w-72 " alt="" />
-      <Image src="/RightB.svg" width={256} height={256} className="absolute bottom-0 right-0 w-64" alt="" />
+      <Image src="/LeftT.png" width={288} height={288} className="absolute top-0 left-0 w-48 xl:w-[380px] h-auto" alt="" />
+      <Image src="/RightB.svg" width={256} height={256} className="absolute bottom-0 right-0 w-64 xl:w-[500px] h-auto" alt="" />
 
       {/* Scattered Decorative Elements */}
    {/* Smiles */}
-      <Image src="/smileH.svg" width={64} height={64} className="absolute top-20 right-[10%] w-16 animate-float" alt="" />
-      <Image src="/smileH.svg" width={48} height={48} className="absolute bottom-[10%] left-[5%] w-12 animate-float [animation-delay:1s]" alt="" />
-      <Image src="/smileH.svg" width={48} height={48} className="absolute top-[45%] left-[8%] w-12 animate-float [animation-delay:2s] " alt="" />
-      <Image src="/smileH.svg" width={40} height={40} className="absolute bottom-[10%] right-[20%] w-10 animate-pulse [animation-duration:3.5s]" alt="" />
+      <Image src="/smileH.svg" width={64} height={64} className="absolute top-20 right-[10%] w-16 h-auto animate-float" alt="" />
+      <Image src="/smileH.svg" width={48} height={48} className="absolute bottom-[10%] left-[5%] w-12 h-auto animate-float [animation-delay:1s]" alt="" />
+      <Image src="/smileH.svg" width={48} height={48} className="absolute top-[45%] left-[8%] w-12 h-auto animate-float [animation-delay:2s] " alt="" />
+      <Image src="/smileH.svg" width={40} height={40} className="absolute bottom-[10%] right-[20%] w-10 h-auto animate-pulse [animation-duration:3.5s]" alt="" />
 
       {/* Yellow Stars */}
-      <Image src="/YellowStar.svg" width={32} height={32} className="absolute top-[15%] left-[5%] w-10 animate-star-spin" alt="" />
-      <Image src="/YellowStar.svg" width={56} height={56} className="absolute top-[5%] right-[25%] opacity-80 w-16 animate-star-spin [animation-duration:5s]" alt="" />
-      <Image src="/YellowStar.svg" width={36} height={36} className="absolute bottom-[20%] right-[10%] w-12 animate-star-spin [animation-duration:2s]" alt="" />
-      <Image src="/YellowStar.svg" width={40} height={40} className="absolute top-[50%] left-[2%] w-14 animate-star-spin opacity-70" alt="" />
+      <Image src="/YellowStar.svg" width={32} height={32} className="absolute top-[15%] left-[5%] w-10 h-auto animate-star-spin" alt="" />
+      <Image src="/YellowStar.svg" width={56} height={56} className="absolute top-[5%] right-[25%] opacity-80 w-16 h-auto animate-star-spin [animation-duration:5s]" alt="" />
+      <Image src="/YellowStar.svg" width={36} height={36} className="absolute bottom-[20%] right-[10%] w-12 h-auto animate-star-spin [animation-duration:2s]" alt="" />
+      <Image src="/YellowStar.svg" width={40} height={40} className="absolute top-[50%] left-[2%] w-14 h-auto animate-star-spin opacity-70" alt="" />
       {/* Additional Yellow Stars */}
-       <Image src="/YellowStar.svg" width={28} height={28} className="absolute top-[8%] right-[18%] w-10 animate-star-spin [animation-delay:1s]" alt="" />
-      <Image src="/YellowStar.svg" width={44} height={44} className="absolute bottom-[45%] right-[3%] w-16 animate-star-spin [animation-duration:4s] opacity-90" alt="" />
-      <Image src="/YellowStar.svg" width={36} height={36} className="absolute top-[30%] left-[20%] w-18 animate-star-spin [animation-delay:2s]" alt="" />
+       <Image src="/YellowStar.svg" width={28} height={28} className="absolute top-[8%] right-[18%] w-10 h-auto animate-star-spin [animation-delay:1s]" alt="" />
+      <Image src="/YellowStar.svg" width={44} height={44} className="absolute bottom-[45%] right-[3%] w-16 h-auto animate-star-spin [animation-duration:4s] opacity-90" alt="" />
+      <Image src="/YellowStar.svg" width={36} height={36} className="absolute top-[30%] left-[20%] w-18 h-auto animate-star-spin [animation-delay:2s]" alt="" />
 
       {/* Pink Stars */}
-      <Image src="/PinkStar.svg" width={56} height={56} className="absolute top-[60%] right-[5%] w-14 animate-star-spin [animation-direction:reverse]" alt="" />
-      <Image src="/PinkStar.svg" width={64} height={64} className="absolute top-[25%] left-[6%] w-16 animate-star-spin [animation-delay:0.5s]" alt="" />
-      <Image src="/PinkStar.svg" width={44} height={44} className="absolute bottom-[5%] right-[30%] w-11 animate-star-spin [animation-duration:4s]" alt="" />
+      <Image src="/PinkStar.svg" width={56} height={56} className="absolute top-[60%] right-[5%] w-14 h-auto animate-star-spin [animation-direction:reverse]" alt="" />
+      <Image src="/PinkStar.svg" width={64} height={64} className="absolute top-[25%] left-[6%] w-16 h-auto animate-star-spin [animation-delay:0.5s]" alt="" />
+      <Image src="/PinkStar.svg" width={44} height={44} className="absolute bottom-[5%] right-[30%] w-11 h-auto animate-star-spin [animation-duration:4s]" alt="" />
       {/* Additional Pink Stars */}
-      <Image src="/PinkStar.svg" width={40} height={40} className="absolute top-[2%] right-[25%] w-10 animate-star-spin [animation-duration:3s]" alt="" />
-      <Image src="/PinkStar.svg" width={32} height={32} className="absolute top-[18%] left-[25%] w-8 animate-star-spin [animation-duration:5s] opacity-85" alt="" />
-      <Image src="/PinkStar.svg" width={48} height={48} className="absolute bottom-[50%] right-[10%] w-12 animate-star-spin [animation-delay:0.8s]" alt="" />
+      <Image src="/PinkStar.svg" width={40} height={40} className="absolute top-[2%] right-[25%] w-10 h-auto animate-star-spin [animation-duration:3s]" alt="" />
+      <Image src="/PinkStar.svg" width={32} height={32} className="absolute top-[18%] left-[25%] w-8 h-auto animate-star-spin [animation-duration:5s] opacity-85" alt="" />
+      <Image src="/PinkStar.svg" width={48} height={48} className="absolute bottom-[50%] right-[10%] w-12 h-auto animate-star-spin [animation-delay:0.8s]" alt="" />
 
       {/* Purple Dots */}
-      <Image src="/PurpleDot.svg" width={40} height={40} className="absolute top-1/3 left-[10%] w-10 animate-pulse" alt="" />
-      <Image src="/PurpleDot.svg" width={20} height={20} className="absolute top-[10%] right-[45%] w-5 opacity-70" alt="" />
-      <Image src="/PurpleDot.svg" width={56} height={56} className="absolute bottom-[30%] left-[8%] w-14 animate-float opacity-80" alt="" />
+      <Image src="/PurpleDot.svg" width={40} height={40} className="absolute top-1/3 left-[10%] w-10 h-auto animate-pulse" alt="" />
+      <Image src="/PurpleDot.svg" width={20} height={20} className="absolute top-[10%] right-[45%] w-5 h-auto opacity-70" alt="" />
+      <Image src="/PurpleDot.svg" width={56} height={56} className="absolute bottom-[30%] left-[8%] w-14 h-auto animate-float opacity-80" alt="" />
       {/* Additional Purple Dots */}
-       <Image src="/PurpleDot.svg" width={32} height={32} className="absolute top-[20%] right-[2%] w-8 animate-float opacity-90" alt="" />
-      <Image src="/PurpleDot.svg" width={32} height={32} className="absolute bottom-[15%] right-[20%] w-8 animate-pulse [animation-delay:1s]" alt="" />
-      <Image src="/PurpleDot.svg" width={20} height={20} className="absolute top-[55%] left-[3%] w-5 animate-float opacity-75" alt="" />
-      <Image src="/PurpleDot.svg" width={24} height={24} className="absolute top-[75%] right-[40%] w-6 animate-pulse [animation-duration:3s]" alt="" />
+       <Image src="/PurpleDot.svg" width={32} height={32} className="absolute top-[20%] right-[2%] w-8 h-auto animate-float opacity-90" alt="" />
+      <Image src="/PurpleDot.svg" width={32} height={32} className="absolute bottom-[15%] right-[20%] w-8 h-auto animate-pulse [animation-delay:1s]" alt="" />
+      <Image src="/PurpleDot.svg" width={20} height={20} className="absolute top-[55%] left-[3%] w-5 h-auto animate-float opacity-75" alt="" />
+      <Image src="/PurpleDot.svg" width={24} height={24} className="absolute top-[75%] right-[40%] w-6 h-auto animate-pulse [animation-duration:3s]" alt="" />
 
       {/* Yellow Dots */}
-      <Image src="/YellowDot.svg" width={32} height={32} className="absolute bottom-10 left-1/2 w-8 animate-pulse" alt="" />
-      <Image src="/YellowDot.svg" width={24} height={24} className="absolute top-[35%] right-[8%] w-6 opacity-60" alt="" />
-      <Image src="/YellowDot.svg" width={24} height={24} className="absolute bottom-[20%] left-[20%] w-6 animate-float [animation-delay:1.5s]" alt="" />
+      <Image src="/YellowDot.svg" width={32} height={32} className="absolute bottom-10 left-1/2 w-8 h-auto animate-pulse" alt="" />
+      <Image src="/YellowDot.svg" width={24} height={24} className="absolute top-[35%] right-[8%] w-6 h-auto opacity-60" alt="" />
+      <Image src="/YellowDot.svg" width={24} height={24} className="absolute bottom-[20%] left-[20%] w-6 h-auto animate-float [animation-delay:1.5s]" alt="" />
       {/* Additional Yellow Dots */}
-       <Image src="/YellowDot.svg" width={20} height={20} className="absolute top-[60%] left-[25%] w-5 animate-float opacity-70" alt="" />
+       <Image src="/YellowDot.svg" width={20} height={20} className="absolute top-[60%] left-[25%] w-5 h-auto animate-float opacity-70" alt="" />
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
-        <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-10 md:mb-18 mt-6 lg:mt-0 lg:mb-24 text-[#1E1E1E] ${titleAnimationClass}`}>
+        <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-center mb-16 md:mb-18 mt-6 lg:mt-0 lg:mb-24 text-[#1E1E1E] ${titleAnimationClass}`}>
           Emotales <span className="text-[#6366F1]">Features</span>
           <span className="inline-block ml-2 sm:ml-4 animate-pulse text-2xl sm:text-3xl md:text-4xl">✨</span>
         </h2>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14 sm:gap-y-20">
           {features.map((item, index) => (
-            <div 
-              key={index} 
-              className={`relative bg-white z-40 border-[1.5px] border-gray-100 rounded-[20px] p-10 pt-16 shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] hover:border-gray-200 transition-all duration-300 text-center group ${getCardAnimationClass(index)}`}
+            <div
+              key={index}
+              className={`relative bg-white z-40 border-[1.5px] border-gray-100 rounded-[20px] p-6 sm:p-6 shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] hover:border-gray-200 transition-all duration-300 text-center group h-[260px]  flex flex-col ${getCardAnimationClass(index)}`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Feature Icon - Positioned on the top border line with circular background */}
-              <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 flex items-center justify-center">
+              <div className="absolute -top-10 sm:-top-12 left-1/2 -translate-x-1/2 w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center">
                 {/* Circular background - different color per icon */}
                 <div className={`absolute inset-0 rounded-full ${item.bgColor} border-2 border-white shadow-sm`}></div>
                 {/* Icon - smaller size */}
-                <Image 
-                  src={`/f${index + 1}.svg`} 
-                  alt="" 
+                <Image
+                  src={`/f${index + 1}.svg`}
+                  alt=""
                   width={64}
                   height={64}
-                  className="relative z-10 w-14 h-14 object-contain" 
+                  className="relative z-10 w-12 h-12 sm:w-[61px] sm:h-[61px] object-contain"
                 />
                 
                   {/* Specific Rocket Logic for the "Add Multiple Children" card (Index 2) */}
@@ -146,12 +146,14 @@ const Features = () => {
               </div>
 
               {/* Card Content */}
-              <h3 className="xl:text-2xl text-xl font-bold text-[#111] mb-2">
-                {item.title}
-              </h3>
-              <p className="text-gray-400 text-[16px] xl:text-[18px] leading-relaxed font-medium">
-                {item.desc}
-              </p>
+              <div className="flex-1 flex flex-col justify-center ">
+                <h3 className="xl:text-2xl text-lg sm:text-xl font-semibold text-[#111] mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-400 text-sm sm:text-[16px] xl:text-[18px] leading-relaxed font-medium line-clamp-3">
+                  {item.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>

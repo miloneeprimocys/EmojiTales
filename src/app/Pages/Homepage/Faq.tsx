@@ -102,10 +102,10 @@ const Faq = () => {
                 </div>
 
                 {/* Content Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-20 items-start">
 
                     {/* Left Side - Fixed Visibility Issue */}
-                <div className={`lg:col-span-5 hidden lg:flex justify-center items-center relative ${animationClass(0)}`}>
+                <div className={`lg:col-span-5 hidden lg:flex justify-center items-start self-start sticky top-20 ${animationClass(0)}`}>
   <div className="relative w-full aspect-square flex items-center justify-center">
     
     {/* SMILE (faq1) - Positioned Top-Left of the main bubble */}

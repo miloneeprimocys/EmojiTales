@@ -43,7 +43,7 @@ const NewsLetter = () => {
       {/* Small icons floating - Responsive positioning to avoid text overlap */}
       <div className="absolute inset-0 z-[1] pointer-events-none">
         {/* Rocket - Top Left */}
-        <div className="absolute top-[30%] left-[2%] sm:left-[8%] animate-float" style={{ animationDuration: '3.5s' }}>
+        <div className="absolute top-[20%] sm:top-[30%] left-[2%] sm:left-[8%] animate-float" style={{ animationDuration: '3.5s' }}>
           <Image src="/n1.svg" alt="Rocket" width={112} height={112} className="w-12 h-12 sm:w-16 md:w-20 lg:w-24 xl:w-28" />
         </div>
         
@@ -58,7 +58,7 @@ const NewsLetter = () => {
         </div>
 
         {/* Angry/Red Emoji - Top Right */}
-        <div className="absolute top-[15%] right-[5%] sm:right-[10%] animate-float" style={{ animationDelay: '0.8s', animationDuration: '4.5s' }}>
+        <div className="absolute top-[5%] sm:top-[15%] right-[25%] sm:right-[10%] animate-float" style={{ animationDelay: '0.8s', animationDuration: '4.5s' }}>
           <Image src="/n4.svg" alt="Angry Emoji" width={112} height={112} className="w-12 h-12 sm:w-16 md:w-20 lg:w-24 xl:w-28" />
         </div>
 

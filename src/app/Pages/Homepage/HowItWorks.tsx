@@ -331,7 +331,7 @@ const StepCard = ({ step, index }: { step: typeof steps[0]; index: number }) => 
     </div>
 
     {/* Fixed height card container - all cards will have exact same height */}
-    <div className="w-full bg-[#f8f9ff] rounded-2xl sm:rounded-[28px] md:rounded-[30px] border border-indigo-200 px-3 pt-10 sm:pt-12 pb-4  flex flex-col items-center transition-all duration-300 group-hover:border-indigo-300 group-hover:bg-white group-hover:shadow-2xl group-hover:shadow-indigo-100/40 relative overflow-hidden h-[310px] sm:h-[330px] md:h-[350px] lg:h-[360px]">
+    <div className="w-full bg-[#F7F6FE] rounded-2xl sm:rounded-[28px] md:rounded-[30px] border border-indigo-200 px-3 pt-10 sm:pt-12 pb-4  flex flex-col items-center transition-all duration-300 group-hover:border-indigo-300 group-hover:bg-white group-hover:shadow-2xl group-hover:shadow-indigo-100/40 relative overflow-hidden h-[310px] sm:h-[330px] md:h-[350px] lg:h-[360px]">
       {/* Inner indigo shadow effect - only around boundaries */}
       <div className="absolute inset-0 rounded-2xl sm:rounded-[28px] md:rounded-[30px] shadow-inner shadow-indigo-300/60 pointer-events-none"></div>
       

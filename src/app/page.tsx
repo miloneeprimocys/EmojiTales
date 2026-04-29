@@ -34,13 +34,13 @@ export default function Home() {
     <div className="overflow-x-hidden space-y-6">
       <Navbar />
       <Hero />
-      <HowItWorks />
+      <Features/>
       <Service />
-      <IdealService />
+      <HowItWorks />
       <FifthSection />
+      <IdealService />
       <Faq />
       <NewsLetter />
-      <Features/>
       <Footer/>
       
       {/* Scroll to Top Button */}
