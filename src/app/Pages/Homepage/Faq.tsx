@@ -83,7 +83,7 @@ const Faq = () => {
     };
 
     return (
-        <section ref={sectionRef} className="py-20 px-4 bg-gradient-to-b from-white to-[#FFF9F5] relative overflow-x-hidden">
+        <section id="faq" ref={sectionRef} className="py-20 px-4 bg-gradient-to-b from-white to-[#FFF9F5] relative overflow-x-hidden">
             
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Heading with Storytelling Elements */}

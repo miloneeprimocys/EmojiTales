@@ -174,7 +174,7 @@ const HowItWorks = () => {
   }, [isPaused, isDragging]);
 
   return (
-    <section ref={sectionRef} className="py-8 sm:py-16 md:py-20 lg:py-24 px-4 bg-white overflow-hidden w-full">
+    <section id="working" ref={sectionRef} className="py-8 sm:py-16 md:py-20 lg:py-24 px-4 bg-white overflow-hidden w-full">
       <div className="max-w-[1400px] mx-auto">
         
         {/* Section Header */}

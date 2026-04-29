@@ -44,7 +44,7 @@ const NewsLetter = () => {
       <div className="absolute inset-0 z-[1] pointer-events-none">
         {/* Rocket - Top Left */}
         <div className="absolute top-[20%] sm:top-[30%] left-[2%] sm:left-[8%] animate-float" style={{ animationDuration: '3.5s' }}>
-          <Image src="/n1.svg" alt="Rocket" width={112} height={112} className="w-12 h-12 sm:w-16 md:w-20 lg:w-24 xl:w-28" />
+          <Image src="/n1.svg" alt="Rocket" width={112} height={112} className="w-12 h-12 sm:w-16 md:w-20 lg:w-24 xl:w-48" />
         </div>
         
         {/* Book - Lower Left */}
@@ -71,11 +71,11 @@ const NewsLetter = () => {
       {/* Background SVG */}
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/footerbg.svg" 
+          src="/footerbg1.svg" 
           alt="Footer Background" 
           width={1920}
           height={600}
-          className="w-full h-full object-cover rounded-t-3xl"
+          className="w-full h-full object-cover "
         />
       </div>
 

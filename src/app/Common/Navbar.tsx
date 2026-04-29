@@ -8,6 +8,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
   // Prevent scrolling when mobile menu is open
   useEffect(() => {
@@ -21,13 +22,55 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
+  // IntersectionObserver to update active section on scroll
+  useEffect(() => {
+    const sections = ['home', 'features', 'service', 'working', 'faq'];
+    const observerOptions = {
+      rootMargin: '-50% 0px -50% 0px', // Trigger when section is in middle of viewport
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach((sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    setActiveSection(sectionId);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navbarHeight = 80; // Height of the navbar
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - navbarHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'Features', href: '#' },
-    { name: 'Templates', href: '#' },
-    { name: 'Pricing', href: '#' },
-    { name: 'FAQ', href: '#' },
-    { name: 'Blog', href: '#' },
+    { name: 'Home', href: '#home', onClick: () => scrollToSection('home') },
+    { name: 'Features', href: '#features', onClick: () => scrollToSection('features') },
+    { name: 'Service', href: '#service', onClick: () => scrollToSection('service') },
+    { name: 'Working', href: '#working', onClick: () => scrollToSection('working') },
+    { name: 'FAQ', href: '#faq', onClick: () => scrollToSection('faq') },
   ];
 
   return (
@@ -42,35 +85,28 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Links */}
-          <div className="hidden lg:flex items-center cursor-pointer gap-10">
+          <div className="hidden lg:flex items-center cursor-pointer justify-center">
             {navLinks.map((link) => (
-              <div key={link.name} className="relative group py-2">
+              <div key={link.name} className="relative group py-2 px-6">
                 <a
                   href={link.href}
-                  className="text-white/80 group-hover:text-white text-[16px] font-medium transition-all duration-200 cursor-pointer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    link.onClick?.();
+                  }}
+                  className="text-white/80 group-hover:text-white text-[16px] font-medium transition-all duration-200 cursor-pointer block text-center"
                 >
                   {link.name}
                 </a>
                 {/* Reference Underline Styling */}
-                <div className={`absolute -bottom-1 left-0 h-[3px] rounded-full bg-[#ffcc4d] transition-all duration-300 
-                  ${link.name === 'Home' ? 'w-full' : 'w-0 group-hover:w-full'}`} 
+                <div className={`absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 h-[3px] rounded-full bg-[#ffcc4d] transition-all duration-300 
+                  ${activeSection === link.name.toLowerCase() ? 'w-14' : 'w-0 group-hover:w-14'}`} 
                 />
               </div>
             ))}
           </div>
 
-          {/* Desktop Action Buttons */}
-          <div className="hidden lg:flex items-center gap-5">
-            <button className="flex btn-shine items-center gap-2 px-6 py-3 text-white/90 border border-white/10 rounded-full hover:bg-white/5 transition-all text-sm font-semibold cursor-pointer">
-              <TbWorld className="text-lg" />
-              <span className="hidden xl:inline">English</span>
-              <IoIosArrowDown className="text-xs opacity-60" />
-            </button>
-            
-            <button className="btn-shine bg-[#FFD12D] text-black font-extrabold px-8 py-3 rounded-full transition-all active:scale-95 text-sm cursor-pointer shadow-lg shadow-[#FFD12D]/20 hover:shadow-[#FFD12D]/30">
-              Get Started
-            </button>
-          </div>
+        
           {/* Hamburger Button */}
           <button 
             onClick={() => setIsOpen(true)}
@@ -78,6 +114,9 @@ const Navbar = () => {
           >
             <HiOutlineMenuAlt3 size={32} />
           </button>
+
+          {/* Placeholder for layout balance */}
+          <div className="hidden lg:block w-32"></div>
         </div>
       </nav>
 
@@ -128,7 +167,11 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 className="text-white cursor-pointer text-xl font-bold py-3 border-b border-white/5 hover:text-[#ffcc4d] transition-all flex items-center justify-between group"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsOpen(false);
+                  link.onClick?.();
+                }}
               >
                 {link.name}
                 <div className="w-10 h-10 flex items-center justify-center -rotate-90 opacity-20 group-hover:opacity-100 transition-all">
@@ -138,17 +181,7 @@ const Navbar = () => {
             ))}
           </div>
           
-          {/* Bottom Sidebar Controls */}
-          <div className="mt-auto flex flex-col gap-3">
-            <button className="flex items-center justify-center gap-2 w-full py-3 text-white border border-white/10 rounded-2xl bg-white/5 font-semibold cursor-pointer">
-              <TbWorld className="text-lg" /> 
-              English
-            </button>
-            
-            <button className="btn-shine w-full bg-[#FFD12D] text-black font-extrabold py-3 rounded-2xl shadow-xl shadow-[#FFD12D]/20 uppercase tracking-widest text-sm transition-all active:scale-[0.98] cursor-pointer hover:shadow-[#FFD12D]/30">
-              Get Started Now
-            </button>
-          </div>
+         
         </div>
       </aside>
     </>

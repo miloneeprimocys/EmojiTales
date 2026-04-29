@@ -28,7 +28,13 @@ const Hero = () => {
   `;
 
   return (
-    <section className="relative min-h-screen lg:min-h-screen bg-[#05011d] pt-24 lg:pt-0 overflow-hidden flex flex-col items-center justify-center">
+    <section id="home" className="relative min-h-screen lg:min-h-screen pt-24 lg:pt-0 overflow-hidden flex flex-col items-center justify-center z-30"
+           style={{
+             backgroundImage: 'url(/herobg.svg)',
+             backgroundSize: 'cover',
+             backgroundPosition: 'bottom center',
+             backgroundRepeat: 'no-repeat'
+           }}>
 
       {/* Background Decorative Glows */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/20 blur-[120px] rounded-full -z-10 animate-pulse" />
@@ -98,26 +104,19 @@ const Hero = () => {
 
         {/* Right Illustration */}
         <div className={`relative flex justify-center items-end self-end h-full transition-all duration-[1500ms] ease-out ${animationClass('delay-300', false, true)}`}>
-          {/* Responsive Logic:
-              Mobile/Tablet: Smaller scale (105-120), very aggressive -mb to avoid overlap.
-              XL+: Kept exactly as your perfect version.
-          */}
-          <div className="relative z-10 w-full flex justify-center    md:-mb-40 lg:-mb-10 xl:-mb-12 2xl:-mb-32">
+          
+          <div className="relative z-10 w-full flex justify-center  mb-4  md:-mb-20 lg:-mb-4 ">
             <Image
               src="/hero.svg"
               alt="Kids reading magical book"
               width={800}
               height={800}
-              className="w-full h-auto scale-110 lg:scale-150 xl:scale-[1.65] 2xl:scale-[2.0] origin-bottom drop-shadow-[0_20px_60px_rgba(168,85,247,0.45)]"
+              className="w-full h-auto scale-[1.05] lg:scale-[1.35] xl:scale-[1.45] 2xl:scale-[1.55] origin-bottom"
             />
           </div>
-        </div>
+             </div>
       </div>
 
-      {/* Cloud Bottom Overlay */}
-      <div className="absolute bottom-0 left-0 w-full z-30 p-0 m-0 leading-[0]">
-        <Image src="/cloud.svg" alt="Cloud" width={1920} height={200} className="w-full h-auto p-0 m-0 translate-y-[2px]" />
-      </div>
     </section>
   );
 };

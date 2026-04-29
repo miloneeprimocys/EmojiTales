@@ -36,9 +36,9 @@ export default function Home() {
       <Hero />
       <Features/>
       <Service />
-      <HowItWorks />
-      <FifthSection />
       <IdealService />
+      <FifthSection />
+      <HowItWorks />
       <Faq />
       <NewsLetter />
       <Footer/>
